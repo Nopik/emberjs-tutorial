@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require handlebars
+//= require ember
+//= require_self
+//= require emberjs_tutorial
+
+App = Ember.Application.create();
