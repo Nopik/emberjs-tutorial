@@ -1,1 +1,19 @@
-%h1 Hello world!
+.navbar.navbar-fixed-top
+	.navbar-inner
+		.container
+			=link_to "Ember Tutorial", root_url({:only_path=>true}), :class => 'brand'
+			.nav-collapse
+				%ul.nav
+					%li.dropdown
+						%a.dropdown-toggle{ :href => "#" }
+							{{outlet categoryName}}
+							%b.caret
+						%ul.dropdown-menu
+							%li.nav-header
+								Categories
+							%li.divider
+							{{outlet categoryMenuItems}}
+
+.container.content-container
+	%div{ :data => { :id => "main-container" } }
+		{{outlet main}}
